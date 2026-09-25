@@ -1,5 +1,6 @@
 import Header from '@/components/layout/Header';
 import DashboardGrid from '@/components/layout/DashboardGrid';
+import SetupPanel from '@/components/panel/SetupPanel'
 
 function PlaceholderBox({ label }: { label: string }) {
   return (
@@ -18,7 +19,8 @@ export default function WireframeLayout() {
 
       {/* Main Container - No overflow/scroll */}
       <DashboardGrid
-        left={<PlaceholderBox label="Box A (Setup)" />}
+        // left={<PlaceholderBox label="Box A (Setup)" />}
+        left={<SetupPanel />}
         middleTop={<PlaceholderBox label="Box B (Watch it fit)" />}
         middleBottom={<PlaceholderBox label="Box C (Test it)" />}
         right={<PlaceholderBox label="Box D (Results)" />}
