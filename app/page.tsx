@@ -1,6 +1,9 @@
 import Header from '@/components/layout/Header';
 import DashboardGrid from '@/components/layout/DashboardGrid';
 import SetupPanel from '@/components/panel/SetupPanel'
+import WatchPanel from '@/components/panel/WatchPanel'
+import TestPanel from '@/components/panel/TestPanel'
+import ResultsPanel from '@/components/panel/ResultsPanel'
 
 function PlaceholderBox({ label }: { label: string }) {
   return (
@@ -20,10 +23,14 @@ export default function WireframeLayout() {
       {/* Main Container - No overflow/scroll */}
       <DashboardGrid
         // left={<PlaceholderBox label="Box A (Setup)" />}
+        // middleTop={<PlaceholderBox label="Box B (Watch it fit)" />}
+        // middleBottom={<PlaceholderBox label="Box C (Test it)" />}
+        // right={<PlaceholderBox label="Box D (Results)" />}
+        
         left={<SetupPanel />}
-        middleTop={<PlaceholderBox label="Box B (Watch it fit)" />}
-        middleBottom={<PlaceholderBox label="Box C (Test it)" />}
-        right={<PlaceholderBox label="Box D (Results)" />}
+        middleTop={<WatchPanel/>}
+        middleBottom={<TestPanel/>}
+        right={<ResultsPanel />}
       />
     </div>
   );
